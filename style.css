@@ -1,0 +1,124 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Screenshot 2024-12-30 193719.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+/* Main section */
+main {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for better readability */
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #34d399;
+}
+
+#create-task-btn {
+    background-color: #34d399;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px; /* Slightly larger padding */
+    font-size: 1.1rem; /* Slightly larger font */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#create-task-btn:hover {
+    background-color: #4cc498;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+#task-list {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px; /* Slightly larger gap between task cards */
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-in-out; /* Smooth animation for task list */
+}
+
+/* Task cards */
+.task {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9); /* Slightly less opaque background for better contrast */
+    border-radius: 15px;
+    width: 260px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 100% solid;
+    border-image: linear-gradient(45deg, #34d399, #60a5fa, #f472b6) 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+    transform: scale(1.05); /* Slightly reduced scale for a more subtle effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.task .task-title,
+.task .task-desc {
+    text-align: center;
+    word-wrap: break-word;
+    color: #333;
+}
+
+.task-buttons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.task-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.task-buttons .edit {
+    color: #4ade80;
+}
+
+.task-buttons .delete {
+    color: #f87171;
+}
+
+.task-buttons button:hover {
+    transform: scale(1.2);
+    color: #fff; /* Add hover color change for better contrast */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
